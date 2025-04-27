@@ -1,0 +1,24 @@
+.experiencias-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 20px;
+}
+
+.experiencia-mat-card {
+  width: 100%;
+}
+
+.certificados-area {
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.anexos {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #757575;
+  margin-top: 5px;
+}

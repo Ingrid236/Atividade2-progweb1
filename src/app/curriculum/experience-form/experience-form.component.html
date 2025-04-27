@@ -1,0 +1,69 @@
+<mat-card class="experience-form-card">
+
+  <mat-card-title>Adicionar Nova Experiência</mat-card-title>
+  <mat-divider></mat-divider>
+
+  <form class="experience-form">
+
+    <!-- Empresa -->
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Tipo de Experiência</mat-label>
+      <mat-icon matPrefix>business</mat-icon>
+      <input matInput placeholder="Nome da Empresa">
+    </mat-form-field>
+
+    <!-- Cargo -->
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Cargo</mat-label>
+      <mat-icon matPrefix>work_outline</mat-icon>
+      <input matInput placeholder="Cargo ocupado">
+    </mat-form-field>
+
+    <!-- Tipo de Contrato -->
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Tipo de Contrato</mat-label>
+      <mat-select>
+        <mat-option value="clt">CLT</mat-option>
+        <mat-option value="pj">PJ</mat-option>
+        <mat-option value="freelancer">Freelancer</mat-option>
+        <mat-option value="estagio">Estágio</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <!-- Data de Início -->
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Data de Início</mat-label>
+      <input matInput [matDatepicker]="inicioPicker" placeholder="Escolha a data">
+      <mat-datepicker-toggle matSuffix [for]="inicioPicker"></mat-datepicker-toggle>
+      <mat-datepicker #inicioPicker></mat-datepicker>
+    </mat-form-field>
+
+    <!-- Data de Fim -->
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Data de Término</mat-label>
+      <input matInput [matDatepicker]="fimPicker" placeholder="Escolha a data">
+      <mat-datepicker-toggle matSuffix [for]="fimPicker"></mat-datepicker-toggle>
+      <mat-datepicker #fimPicker></mat-datepicker>
+    </mat-form-field>
+
+    <!-- Horário de Trabalho (sugestão usando Input) -->
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Horário de Trabalho</mat-label>
+      <input matInput type="time" placeholder="Horário de trabalho">
+    </mat-form-field>
+
+    <!-- Descrição -->
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Descrição</mat-label>
+      <textarea matInput placeholder="Descreva suas atividades" rows="4"></textarea>
+    </mat-form-field>
+
+    <!-- Botões -->
+    <div class="actions">
+      <button mat-raised-button color="primary">Salvar</button>
+      <button mat-stroked-button color="warn" routerLink="/curriculo">Cancelar</button>
+    </div>
+
+  </form>
+
+</mat-card>
